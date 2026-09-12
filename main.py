@@ -362,7 +362,7 @@ def load_llm():
     if not GROQ_API_KEY:
         st.error("GROQ_API_KEY missing from .env and environment.")
         st.stop()
-    return ChatGroq(groq_api_key=GROQ_API_KEY, model_name="llama-3.1-8b-instant")
+    return ChatGroq(groq_api_key=GROQ_API_KEY, model_name="openai/gpt-oss-20b")
 
 
 def get_sql(question: str) -> str:
